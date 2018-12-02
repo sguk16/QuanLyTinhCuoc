@@ -159,6 +159,7 @@
             this.btnxuatfile.Size = new System.Drawing.Size(215, 38);
             this.btnxuatfile.TabIndex = 6;
             this.btnxuatfile.Text = "Xuất file log";
+            this.btnxuatfile.Click += new System.EventHandler(this.btnxuatfile_Click);
             // 
             // Form1
             // 
@@ -173,7 +174,6 @@
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            this.layoutControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();

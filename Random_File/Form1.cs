@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,7 +32,7 @@ namespace Random_File
         {
             gvfilelog.Rows.Clear();
 
-            int maxrows = 100;
+            int maxrows = 10;
 
             Random gen = new Random();
 
@@ -41,20 +42,44 @@ namespace Random_File
             DateTime start;
             DateTime end;
 
-
             for (int i = 0; i < maxrows; i++)
             {
                 gvfilelog.Rows.Add();
-
                 gvfilelog.Rows[i].Cells["IDSIM"].Value = IDs[gen.Next(IDs.Count)];
-
 
                 start = GetStartTime(gen);
                 end = start.AddHours(gen.Next(0, 2)).AddMinutes(gen.Next(0, 60)).AddSeconds(gen.Next(0, 60));
 
+                gvfilelog.Rows[i].Cells["TGBD"].Value = start.ToString("yyyy-MM-dd HH:mm:ss");
+                gvfilelog.Rows[i].Cells["TGKT"].Value = end.ToString("yyyy-MM-dd HH:mm:ss");
+            }
+        }
 
-                gvfilelog.Rows[i].Cells["TGBD"].Value = start.ToString("dd-MM-yyyy   HH:mm:ss");
-                gvfilelog.Rows[i].Cells["TGKT"].Value = end.ToString("dd-MM-yyyy   HH:mm:ss");
+        private void btnxuatfile_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog save = new SaveFileDialog();
+
+            save.Title = "Xuất file Log";
+            save.FileName = "File_log"+".txt";
+            save.Filter = "Text File | *.txt";
+
+            if (save.ShowDialog() == DialogResult.OK)
+            {
+                StreamWriter writer = new StreamWriter(save.OpenFile());
+
+                for (int i = 0; i < gvfilelog.Rows.Count; i++)
+                {
+                    for (int j = 0; j < gvfilelog.Columns.Count; j++)
+                    {
+                        writer.Write(gvfilelog.Rows[i].Cells[j].Value.ToString() + "\t");
+                    }
+                    writer.WriteLine("");
+                }
+
+                writer.Dispose();
+                writer.Close();
+
+                MessageBox.Show("Xuất File thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
         }
     }
