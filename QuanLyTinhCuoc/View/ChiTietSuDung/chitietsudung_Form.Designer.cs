@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode3 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode4 = new DevExpress.XtraGrid.GridLevelNode();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.btn_nhapfilelog = new DevExpress.XtraEditors.SimpleButton();
             this.tbxTGKT = new System.Windows.Forms.TextBox();
             this.tbxTGBD = new System.Windows.Forms.TextBox();
             this.tbxIDSIM = new System.Windows.Forms.TextBox();
@@ -44,7 +44,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tbxMaCTSD = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_nhapfilelog = new DevExpress.XtraEditors.SimpleButton();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.gcchitietsudung = new DevExpress.XtraGrid.GridControl();
             this.gvchitietsudung = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -84,6 +84,18 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // btn_nhapfilelog
+            // 
+            this.btn_nhapfilelog.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_nhapfilelog.Appearance.Options.UseFont = true;
+            this.btn_nhapfilelog.Location = new System.Drawing.Point(611, 228);
+            this.btn_nhapfilelog.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_nhapfilelog.Name = "btn_nhapfilelog";
+            this.btn_nhapfilelog.Size = new System.Drawing.Size(211, 53);
+            this.btn_nhapfilelog.TabIndex = 54;
+            this.btn_nhapfilelog.Text = "Nhập File Log";
+            this.btn_nhapfilelog.Click += new System.EventHandler(this.btn_nhapfilelog_Click);
             // 
             // tbxTGKT
             // 
@@ -204,16 +216,6 @@
             this.label1.TabIndex = 20;
             this.label1.Text = "Mã chi tiết";
             // 
-            // btn_nhapfilelog
-            // 
-            this.btn_nhapfilelog.Location = new System.Drawing.Point(611, 228);
-            this.btn_nhapfilelog.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_nhapfilelog.Name = "btn_nhapfilelog";
-            this.btn_nhapfilelog.Size = new System.Drawing.Size(172, 47);
-            this.btn_nhapfilelog.TabIndex = 54;
-            this.btn_nhapfilelog.Text = "Nhập file log";
-            this.btn_nhapfilelog.Click += new System.EventHandler(this.btn_nhapfilelog_Click);
-            // 
             // groupControl1
             // 
             this.groupControl1.Controls.Add(this.gcchitietsudung);
@@ -227,11 +229,11 @@
             // 
             this.gcchitietsudung.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gcchitietsudung.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            gridLevelNode1.RelationName = "Level1";
-            gridLevelNode2.RelationName = "Level2";
+            gridLevelNode3.RelationName = "Level1";
+            gridLevelNode4.RelationName = "Level2";
             this.gcchitietsudung.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1,
-            gridLevelNode2});
+            gridLevelNode3,
+            gridLevelNode4});
             this.gcchitietsudung.Location = new System.Drawing.Point(3, 30);
             this.gcchitietsudung.MainView = this.gvchitietsudung;
             this.gcchitietsudung.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);

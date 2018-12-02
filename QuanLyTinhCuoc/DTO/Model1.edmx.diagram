@@ -4,14 +4,14 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="9222abdbd2f64cb7a133305803782f07" Name="Diagram1">
-        <EntityTypeShape EntityType="QLTinhCuocDT2Model.ChiTietSuDung" Width="1.5" PointX="3.125" PointY="0.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLTinhCuocDT2Model.GiaCuoc" Width="1.5" PointX="1.125" PointY="0.625" IsExpanded="true" />
+      <Diagram DiagramId="97c5ff111daa416d9abe0cfc29aa861e" Name="Diagram1">
+        <EntityTypeShape EntityType="QLTinhCuocDT2Model.ChiTietSuDung" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTinhCuocDT2Model.GiaCuoc" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="QLTinhCuocDT2Model.HoaDonDangKy" Width="1.5" PointX="5.25" PointY="4.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLTinhCuocDT2Model.HoaDonTinhCuoc" Width="1.5" PointX="5.125" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLTinhCuocDT2Model.KhachHang" Width="1.5" PointX="7" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTinhCuocDT2Model.HoaDonTinhCuoc" Width="1.5" PointX="5.25" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTinhCuocDT2Model.KhachHang" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
         <EntityTypeShape EntityType="QLTinhCuocDT2Model.sysdiagram" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLTinhCuocDT2Model.ThongTinSIM" Width="1.5" PointX="3.875" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTinhCuocDT2Model.ThongTinSIM" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
         <AssociationConnector Association="QLTinhCuocDT2Model.FK__ChiTietSu__IDSIM__4316F928" ManuallyRouted="false" />
         <AssociationConnector Association="QLTinhCuocDT2Model.FK__HoaDonDan__IDSIM__3D5E1FD2" ManuallyRouted="false" />
         <AssociationConnector Association="QLTinhCuocDT2Model.FK__HoaDonTin__IDSIM__403A8C7D" ManuallyRouted="false" />

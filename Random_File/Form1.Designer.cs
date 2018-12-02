@@ -34,11 +34,11 @@
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.gvfilelog = new System.Windows.Forms.DataGridView();
+            this.btntaodulieu = new DevExpress.XtraEditors.SimpleButton();
+            this.btnxuatfile = new DevExpress.XtraEditors.SimpleButton();
             this.idsim = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tgbd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tgkt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btntaodulieu = new DevExpress.XtraEditors.SimpleButton();
-            this.btnxuatfile = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
@@ -116,29 +116,6 @@
             this.gvfilelog.Size = new System.Drawing.Size(1082, 437);
             this.gvfilelog.TabIndex = 2;
             // 
-            // idsim
-            // 
-            this.idsim.HeaderText = "IDSIM";
-            this.idsim.Name = "idsim";
-            this.idsim.ReadOnly = true;
-            this.idsim.Width = 300;
-            // 
-            // tgbd
-            // 
-            this.tgbd.HeaderText = "Thời gian bắt đầu";
-            this.tgbd.MinimumWidth = 100;
-            this.tgbd.Name = "tgbd";
-            this.tgbd.ReadOnly = true;
-            this.tgbd.Width = 400;
-            // 
-            // tgkt
-            // 
-            this.tgkt.HeaderText = "Thời gian kết thúc";
-            this.tgkt.MinimumWidth = 100;
-            this.tgkt.Name = "tgkt";
-            this.tgkt.ReadOnly = true;
-            this.tgkt.Width = 400;
-            // 
             // btntaodulieu
             // 
             this.btntaodulieu.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -160,6 +137,29 @@
             this.btnxuatfile.TabIndex = 6;
             this.btnxuatfile.Text = "Xuất file log";
             this.btnxuatfile.Click += new System.EventHandler(this.btnxuatfile_Click);
+            // 
+            // idsim
+            // 
+            this.idsim.HeaderText = "IDSIM";
+            this.idsim.Name = "idsim";
+            this.idsim.ReadOnly = true;
+            this.idsim.Width = 150;
+            // 
+            // tgbd
+            // 
+            this.tgbd.HeaderText = "Thời gian bắt đầu";
+            this.tgbd.MinimumWidth = 100;
+            this.tgbd.Name = "tgbd";
+            this.tgbd.ReadOnly = true;
+            this.tgbd.Width = 260;
+            // 
+            // tgkt
+            // 
+            this.tgkt.HeaderText = "Thời gian kết thúc";
+            this.tgkt.MinimumWidth = 100;
+            this.tgkt.Name = "tgkt";
+            this.tgkt.ReadOnly = true;
+            this.tgkt.Width = 260;
             // 
             // Form1
             // 
@@ -190,11 +190,11 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private System.Windows.Forms.DataGridView gvfilelog;
+        private DevExpress.XtraEditors.SimpleButton btntaodulieu;
+        private DevExpress.XtraEditors.SimpleButton btnxuatfile;
         private System.Windows.Forms.DataGridViewTextBoxColumn idsim;
         private System.Windows.Forms.DataGridViewTextBoxColumn tgbd;
         private System.Windows.Forms.DataGridViewTextBoxColumn tgkt;
-        private DevExpress.XtraEditors.SimpleButton btntaodulieu;
-        private DevExpress.XtraEditors.SimpleButton btnxuatfile;
     }
 }
 
