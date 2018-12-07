@@ -54,5 +54,10 @@ namespace QuanLyTinhCuoc.BUS
         {
             return thongtinDAO.LoadMaKH();
         }
+        public List<ThongTinSIM> loadtheokh(string makh)
+        {
+            var danhsach = thongtinDAO.loadtheokh(makh);
+            return danhsach.ToList();
+        }
     }
 }

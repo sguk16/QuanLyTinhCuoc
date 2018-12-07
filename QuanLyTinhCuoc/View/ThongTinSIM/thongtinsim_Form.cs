@@ -109,6 +109,40 @@ namespace QuanLyTinhCuoc.View.ThongTinSIM
         {
 
         }
-        
+
+        private void groupControl1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void groupControl2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void gvKhachhang_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        {
+            List<DTO.KhachHang> khs = ((List<DTO.KhachHang>)gvKhachhang.DataSource);
+            DTO.KhachHang kh = khs[gvKhachhang.FocusedRowHandle];
+            string makh = kh.MaKH;
+            List<DTO.ThongTinSIM> ds = thongtinBUS.loadtheokh(makh);
+            gcSim.DataSource = ds.ToList();
+        }
+
+        private void btn_reset_Click(object sender, EventArgs e)
+        {
+            Load_SIM();
+        }
+
+        private void gvSim_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        {
+            List<DTO.ThongTinSIM> thongtinsims = ((List<DTO.ThongTinSIM>)gvSim.DataSource);
+            DTO.ThongTinSIM thongtinsim = thongtinsims[gvSim.FocusedRowHandle];
+            txt_idsim.Text = thongtinsim.IDSIM;
+            cbbMaKH.Text = thongtinsim.MaKH;
+            txt_sdt.Text = thongtinsim.SoDienThoai;
+            dtpNgayDangKy.Text = thongtinsim.NgayDangKy.ToString();
+            dtpNgayHetHan.Text = thongtinsim.NgayHetHan.ToString();
+        }
     }
 }

@@ -55,16 +55,16 @@
             this.colten = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCMND = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNghenghiep = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colChucvu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDiachi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.gcSim = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gvSim = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btn_reset = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtpNgayHetHan.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpNgayHetHan.Properties)).BeginInit();
@@ -80,11 +80,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcSim)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvSim)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btn_reset);
             this.groupBox1.Controls.Add(this.dtpNgayHetHan);
             this.groupBox1.Controls.Add(this.dtpNgayDangKy);
             this.groupBox1.Controls.Add(this.btn_themkh);
@@ -188,7 +189,7 @@
             // 
             // btn_thoatkh
             // 
-            this.btn_thoatkh.Location = new System.Drawing.Point(370, 303);
+            this.btn_thoatkh.Location = new System.Drawing.Point(289, 303);
             this.btn_thoatkh.Margin = new System.Windows.Forms.Padding(4);
             this.btn_thoatkh.Name = "btn_thoatkh";
             this.btn_thoatkh.Size = new System.Drawing.Size(172, 47);
@@ -271,7 +272,8 @@
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(744, 340);
             this.groupControl1.TabIndex = 1;
-            this.groupControl1.Text = "groupControl1";
+            this.groupControl1.Text = "Thông tin khách hàng";
+            this.groupControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
             // 
             // gcKhachHang
             // 
@@ -299,11 +301,11 @@
             this.colten,
             this.colCMND,
             this.colNghenghiep,
-            this.colChucvu,
             this.colDiachi});
             this.gvKhachhang.GridControl = this.gcKhachHang;
             this.gvKhachhang.Name = "gvKhachhang";
             this.gvKhachhang.OptionsFind.AlwaysVisible = true;
+            this.gvKhachhang.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gvKhachhang_RowClick);
             // 
             // colMakhachhanh
             // 
@@ -337,21 +339,13 @@
             this.colNghenghiep.Visible = true;
             this.colNghenghiep.VisibleIndex = 3;
             // 
-            // colChucvu
-            // 
-            this.colChucvu.Caption = "Chức vụ";
-            this.colChucvu.FieldName = "ChucVu";
-            this.colChucvu.Name = "colChucvu";
-            this.colChucvu.Visible = true;
-            this.colChucvu.VisibleIndex = 4;
-            // 
             // colDiachi
             // 
             this.colDiachi.Caption = "Địa chỉ";
             this.colDiachi.FieldName = "DiaChi";
             this.colDiachi.Name = "colDiachi";
             this.colDiachi.Visible = true;
-            this.colDiachi.VisibleIndex = 5;
+            this.colDiachi.VisibleIndex = 4;
             // 
             // groupControl2
             // 
@@ -360,7 +354,8 @@
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(603, 712);
             this.groupControl2.TabIndex = 2;
-            this.groupControl2.Text = "groupControl2";
+            this.groupControl2.Text = "Danh sách SIM";
+            this.groupControl2.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl2_Paint);
             // 
             // gcSim
             // 
@@ -374,26 +369,27 @@
             gridLevelNode4,
             gridLevelNode5});
             this.gcSim.Location = new System.Drawing.Point(3, 30);
-            this.gcSim.MainView = this.gridView1;
+            this.gcSim.MainView = this.gvSim;
             this.gcSim.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gcSim.Name = "gcSim";
             this.gcSim.Size = new System.Drawing.Size(597, 679);
             this.gcSim.TabIndex = 1;
             this.gcSim.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.gvSim});
             this.gcSim.Click += new System.EventHandler(this.gcSim_Click);
             // 
-            // gridView1
+            // gvSim
             // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gvSim.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1,
             this.gridColumn2,
             this.gridColumn3,
             this.gridColumn4,
             this.gridColumn5});
-            this.gridView1.GridControl = this.gcSim;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsFind.AlwaysVisible = true;
+            this.gvSim.GridControl = this.gcSim;
+            this.gvSim.Name = "gvSim";
+            this.gvSim.OptionsFind.AlwaysVisible = true;
+            this.gvSim.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gvSim_RowClick);
             // 
             // gridColumn1
             // 
@@ -429,11 +425,21 @@
             // 
             // gridColumn5
             // 
-            this.gridColumn5.Caption = "Tên Khách Hàng";
-            this.gridColumn5.FieldName = "TenKH";
+            this.gridColumn5.Caption = "Tình trạng";
+            this.gridColumn5.FieldName = "Flag";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 4;
+            // 
+            // btn_reset
+            // 
+            this.btn_reset.Location = new System.Drawing.Point(503, 303);
+            this.btn_reset.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_reset.Name = "btn_reset";
+            this.btn_reset.Size = new System.Drawing.Size(172, 47);
+            this.btn_reset.TabIndex = 65;
+            this.btn_reset.Text = "Reset";
+            this.btn_reset.Click += new System.EventHandler(this.btn_reset_Click);
             // 
             // thongtinsim_Form
             // 
@@ -461,7 +467,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gcSim)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvSim)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -491,14 +497,14 @@
         private DevExpress.XtraGrid.Columns.GridColumn colten;
         private DevExpress.XtraGrid.Columns.GridColumn colCMND;
         private DevExpress.XtraGrid.Columns.GridColumn colNghenghiep;
-        private DevExpress.XtraGrid.Columns.GridColumn colChucvu;
         private DevExpress.XtraGrid.Columns.GridColumn colDiachi;
         private DevExpress.XtraGrid.GridControl gcSim;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvSim;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+        private DevExpress.XtraEditors.SimpleButton btn_reset;
     }
 }

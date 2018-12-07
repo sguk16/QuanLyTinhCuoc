@@ -19,6 +19,11 @@ namespace QuanLyTinhCuoc.DAO
         {
             return db.ThongTinSIMs.ToList();
         }
+        public List<ThongTinSIM> loadtheokh(string makh)
+        {
+            var danhsach = db.ThongTinSIMs.Where(p=>p.MaKH == makh);
+            return danhsach.ToList();
+        }
 
         public bool ThemThongTinSim(ThongTinSIM thongtin)
         {
