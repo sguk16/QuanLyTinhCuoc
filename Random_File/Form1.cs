@@ -32,7 +32,7 @@ namespace Random_File
         {
             gvfilelog.Rows.Clear();
 
-            int maxrows = 10;
+            int maxrows = Int32.Parse(txtMaxrows.Text);
 
             Random gen = new Random();
 

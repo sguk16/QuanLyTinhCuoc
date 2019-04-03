@@ -1,4 +1,5 @@
-﻿
+﻿use master
+go
 create database QLTinhCuocDT2
 
 go
@@ -112,13 +113,6 @@ insert into HoaDonTinhCuoc values ('HDTC02','SIM01','2018-02-01','2019-04-31',52
 insert into HoaDonTinhCuoc values ('HDTC03','SIM02','2018-03-01','2019-02-31',51400,51400,'2018-03-10',1,1)
 insert into HoaDonTinhCuoc values ('HDTC04','SIM02','2018-04-01','2019-05-31',51400,102800,'2018-04-10',1,1)
 insert into HoaDonTinhCuoc values ('HDTC05','SIM03','2018-05-01','2019-06-31',52000,52000,'2018-05-10',1,1)
-insert into HoaDonTinhCuoc values ('HDTC06','SIM03','2018-06-01','2019-07-31',52000,104000,'2018-06-10',1,1)
-insert into HoaDonTinhCuoc values ('HDTC07','SIM04','2018-07-01','2019-08-31',52400,52400,'2018-07-10',1,1)
-insert into HoaDonTinhCuoc values ('HDTC08','SIM04','2018-08-01','2019-10-31',52400,104800,'2018-08-10',1,1)
-insert into HoaDonTinhCuoc values ('HDTC09','SIM05','2018-09-01','2019-09-31',52200,52200,'2018-09-10',1,1)
-insert into HoaDonTinhCuoc values ('HDTC10','SIM05','2018-10-01','2019-11-31',52200,104400,'2018-10-10',1,1)
-insert into HoaDonTinhCuoc values ('HDTC11','SIM06','2018-11-01','2019-12-31',52000,52000,'2018-11-12',1,1)	
-insert into HoaDonTinhCuoc values ('HDTC12','SIM06','2018-12-01','2019-01-31',52000,104000,'2018-12-11',1,1)
 
 
 insert into ChiTietSuDung values ('0001','SIM01','2018-03-10 10:34:09','2018-03-10 10:37:09',3,0)

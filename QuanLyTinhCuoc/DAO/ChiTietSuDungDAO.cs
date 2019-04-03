@@ -34,8 +34,27 @@ namespace QuanLyTinhCuoc.DAO
                             System.Globalization.CultureInfo.InvariantCulture);
                     DateTime dateKT = DateTime.ParseExact(split[2], "yyyy-MM-dd HH:mm:ss",
                             System.Globalization.CultureInfo.InvariantCulture);
-                    TimeSpan time = dateKT - dateBD;
+                    DateTime tmp23 = dateBD.Date.AddHours(23);
+                    DateTime tmp7 = dateBD.Date.AddHours(7);
+                    if ((dateBD.Hour < 23 && dateBD.Hour >=7) && (dateKT.Hour >= 23 || dateKT.Hour < 7))
+                    {
+                        sophutSD23h7h = Math.Round((decimal)(dateKT - tmp23).TotalMinutes);
+                        sophutSD7h23h = Math.Round((decimal)(tmp23 - dateBD).TotalMinutes);
+                    }
+                    else
+                        if(dateBD.Hour < 7 && (dateKT.Hour >= 7 && dateKT.Hour < 23))
+                        {
+                            sophutSD7h23h = Math.Round((decimal)(dateKT - tmp7).TotalMinutes);
+                            sophutSD23h7h = Math.Round((decimal)(tmp7 - dateBD).TotalMinutes);
+                        }
+                        else
+                            if( dateBD.Hour >= 7 && dateKT.Hour<23 )
+                                sophutSD7h23h = Math.Round((decimal)(dateKT - dateBD).TotalMinutes);
+                            else
+                                sophutSD23h7h = Math.Round((decimal)(dateKT - dateBD).TotalMinutes);
+                    /*TimeSpan time = dateKT - dateBD;
                     decimal phut = Math.Round((decimal)time.TotalMinutes);
+                    
                     if (7 < dateKT.Hour && dateKT.Hour < 24)
                     {
                         sophutSD7h23h = phut;
@@ -43,15 +62,16 @@ namespace QuanLyTinhCuoc.DAO
                     else
                     {
                         sophutSD23h7h = phut;
-                    }
+                    }*/
                     db.ChiTietSuDungs.Add(new ChiTietSuDung() { ID = id + 1, IDSIM = split[0], TGBD = dateBD, TGKT = dateKT, SoPhutSD7h23h = sophutSD7h23h, SoPhutSD23h7h = sophutSD23h7h });
                     db.SaveChanges();
                 }
                 TinhHoaDonTinhCuoc();
                 return true;
             }
-            catch
+            catch(Exception e)
             {
+                Console.WriteLine(e);
                 return false;
             }
         }
