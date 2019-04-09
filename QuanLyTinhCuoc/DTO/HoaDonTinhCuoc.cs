@@ -14,7 +14,7 @@ namespace QuanLyTinhCuoc.DTO
     
     public partial class HoaDonTinhCuoc
     {
-        public string MaHDTC { get; set; }
+        public int MaHDTC { get; set; }
         public string IDSIM { get; set; }
         public Nullable<System.DateTime> TuNgay { get; set; }
         public Nullable<System.DateTime> DenNgay { get; set; }

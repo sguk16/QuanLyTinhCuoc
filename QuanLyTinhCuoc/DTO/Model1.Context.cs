@@ -30,7 +30,6 @@ namespace QuanLyTinhCuoc.DTO
         public virtual DbSet<HoaDonDangKy> HoaDonDangKies { get; set; }
         public virtual DbSet<HoaDonTinhCuoc> HoaDonTinhCuocs { get; set; }
         public virtual DbSet<KhachHang> KhachHangs { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<ThongTinSIM> ThongTinSIMs { get; set; }
     }
 }

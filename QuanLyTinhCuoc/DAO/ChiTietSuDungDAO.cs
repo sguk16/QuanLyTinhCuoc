@@ -88,10 +88,9 @@ namespace QuanLyTinhCuoc.DAO
                 }).ToList();
             foreach (var item in result)
             {
-                string ma = db.HoaDonTinhCuocs.Max(i => i.MaHDTC);
+                int ma = db.HoaDonTinhCuocs.Max(i => i.MaHDTC);//db.HoaDonTinhCuocs.Max(i => i.MaHDTC);
                 Console.WriteLine(ma);
-                int maso = Int32.Parse(ma) + 1;
-                string id = maso.ToString();
+                int id = ma + 1;
                 DateTime ngaytu = new DateTime(DateTime.Now.Year, item.thang, 1);
                 ngaytu = ngaytu.AddDays((-ngaytu.Day) + 1);
                 string tungay_tam = String.Format("{0:yyyy-MM-dd}", ngaytu);
