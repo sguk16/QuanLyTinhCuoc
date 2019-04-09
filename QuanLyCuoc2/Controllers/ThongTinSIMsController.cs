@@ -12,7 +12,7 @@ namespace QuanLyCuoc2.Controllers
 {
     public class ThongTinSIMsController : Controller
     {
-        private Model1 db = new Model1();
+        private QLTinhCuocDT2Entities db = new QLTinhCuocDT2Entities();
 
         // GET: ThongTinSIMs
         public ActionResult Index()

@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLyTinhCuoc", "QuanLyTin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Random_File", "Random_File\Random_File.csproj", "{F510DA51-A709-4ABB-91F9-7FC8EBF6A560}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLyTinhCuocWeb", "..\QuanlyCuocDT_WebForm\QuanLyCuoc2\QuanLyTinhCuocWeb.csproj", "{98EE6AC3-03B7-4D04-A2EC-CE9682D38093}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLyCuoc2", "QuanLyCuoc2\QuanLyCuoc2.csproj", "{98EE6AC3-03B7-4D04-A2EC-CE9682D38093}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

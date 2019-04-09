@@ -12,7 +12,7 @@ namespace QuanLyCuoc2.Controllers
 {
     public class ChiTietSuDungsController : Controller
     {
-        private Model1 db = new Model1();
+        private QLTinhCuocDT2Entities db = new QLTinhCuocDT2Entities();
 
         // GET: ChiTietSuDungs
         public ActionResult Index(string id, int date)
