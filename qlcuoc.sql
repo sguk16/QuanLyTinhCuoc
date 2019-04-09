@@ -4,7 +4,6 @@ create database QLTinhCuocDT2
 
 go
 use QLTinhCuocDT2
-
 create table KhachHang
 (
 	MaKH varchar(20) primary key,
@@ -50,7 +49,7 @@ insert into HoaDonDangKy values ('HDDK06','SIM06',50000,'2019-03-10',1)
 
 create table HoaDonTinhCuoc
 (
-	MaHDTC varchar(20) primary key,
+	MaHDTC int primary key,
 	IDSIM varchar(20),
 	TuNgay datetime,
 	DenNgay datetime,
@@ -108,11 +107,11 @@ insert into ThongTinSIM values ('SIM06','0121236887','2018-03-15','2019-03-15',1
 
 
 
-insert into HoaDonTinhCuoc values ('HDTC01','SIM01','2018-01-01','2019-03-31',52400,52400,'2018-01-10',1,1)
-insert into HoaDonTinhCuoc values ('HDTC02','SIM01','2018-02-01','2019-04-31',52400,104800,'2018-02-10',1,1)
-insert into HoaDonTinhCuoc values ('HDTC03','SIM02','2018-03-01','2019-02-31',51400,51400,'2018-03-10',1,1)
-insert into HoaDonTinhCuoc values ('HDTC04','SIM02','2018-04-01','2019-05-31',51400,102800,'2018-04-10',1,1)
-insert into HoaDonTinhCuoc values ('HDTC05','SIM03','2018-05-01','2019-06-31',52000,52000,'2018-05-10',1,1)
+insert into HoaDonTinhCuoc values (1,'SIM01','2018-01-01','2019-03-31',52400,52400,'2018-01-10',1,1)
+insert into HoaDonTinhCuoc values (2,'SIM01','2018-02-01','2019-04-31',52400,104800,'2018-02-10',1,1)
+insert into HoaDonTinhCuoc values (3,'SIM02','2018-03-01','2019-02-31',51400,51400,'2018-03-10',1,1)
+insert into HoaDonTinhCuoc values (4,'SIM02','2018-04-01','2019-05-31',51400,102800,'2018-04-10',1,1)
+insert into HoaDonTinhCuoc values (5,'SIM03','2018-05-01','2019-06-31',52000,52000,'2018-05-10',1,1)
 
 
 insert into ChiTietSuDung values ('0001','SIM01','2018-03-10 10:34:09','2018-03-10 10:37:09',3,0)
