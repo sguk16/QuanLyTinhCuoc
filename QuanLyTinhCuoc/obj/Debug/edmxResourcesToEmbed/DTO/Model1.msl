@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QLTinhCuocDT2ModelStoreContainer" CdmEntityContainer="QLTinhCuocDT2Entities">
+    <EntitySetMapping Name="ChiTietSuDungs">
+      <EntityTypeMapping TypeName="QLTinhCuocDT2Model.ChiTietSuDung">
+        <MappingFragment StoreEntitySet="ChiTietSuDung">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDSIM" ColumnName="IDSIM" />
+          <ScalarProperty Name="TGBD" ColumnName="TGBD" />
+          <ScalarProperty Name="TGKT" ColumnName="TGKT" />
+          <ScalarProperty Name="SoPhutSD7h23h" ColumnName="SoPhutSD7h23h" />
+          <ScalarProperty Name="SoPhutSD23h7h" ColumnName="SoPhutSD23h7h" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GiaCuocs">
+      <EntityTypeMapping TypeName="QLTinhCuocDT2Model.GiaCuoc">
+        <MappingFragment StoreEntitySet="GiaCuoc">
+          <ScalarProperty Name="MaGiaCuoc" ColumnName="MaGiaCuoc" />
+          <ScalarProperty Name="TGBD" ColumnName="TGBD" />
+          <ScalarProperty Name="TGKT" ColumnName="TGKT" />
+          <ScalarProperty Name="Giacuoc1" ColumnName="Giacuoc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HoaDonDangKies">
+      <EntityTypeMapping TypeName="QLTinhCuocDT2Model.HoaDonDangKy">
+        <MappingFragment StoreEntitySet="HoaDonDangKy">
+          <ScalarProperty Name="MaHDDK" ColumnName="MaHDDK" />
+          <ScalarProperty Name="IDSIM" ColumnName="IDSIM" />
+          <ScalarProperty Name="ChiPhiDangKy" ColumnName="ChiPhiDangKy" />
+          <ScalarProperty Name="NgayDangKy" ColumnName="NgayDangKy" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HoaDonTinhCuocs">
+      <EntityTypeMapping TypeName="QLTinhCuocDT2Model.HoaDonTinhCuoc">
+        <MappingFragment StoreEntitySet="HoaDonTinhCuoc">
+          <ScalarProperty Name="MaHDTC" ColumnName="MaHDTC" />
+          <ScalarProperty Name="IDSIM" ColumnName="IDSIM" />
+          <ScalarProperty Name="TuNgay" ColumnName="TuNgay" />
+          <ScalarProperty Name="DenNgay" ColumnName="DenNgay" />
+          <ScalarProperty Name="PhiHangThang" ColumnName="PhiHangThang" />
+          <ScalarProperty Name="TongTien" ColumnName="TongTien" />
+          <ScalarProperty Name="NgayXuat" ColumnName="NgayXuat" />
+          <ScalarProperty Name="ThanhToan" ColumnName="ThanhToan" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KhachHangs">
+      <EntityTypeMapping TypeName="QLTinhCuocDT2Model.KhachHang">
+        <MappingFragment StoreEntitySet="KhachHang">
+          <ScalarProperty Name="MaKH" ColumnName="MaKH" />
+          <ScalarProperty Name="TenKH" ColumnName="TenKH" />
+          <ScalarProperty Name="CMND" ColumnName="CMND" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="NgheNghiep" ColumnName="NgheNghiep" />
+          <ScalarProperty Name="ChucVu" ColumnName="ChucVu" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="NgayDangKy" ColumnName="NgayDangKy" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ThongTinSIMs">
+      <EntityTypeMapping TypeName="QLTinhCuocDT2Model.ThongTinSIM">
+        <MappingFragment StoreEntitySet="ThongTinSIM">
+          <ScalarProperty Name="IDSIM" ColumnName="IDSIM" />
+          <ScalarProperty Name="SoDienThoai" ColumnName="SoDienThoai" />
+          <ScalarProperty Name="NgayDangKy" ColumnName="NgayDangKy" />
+          <ScalarProperty Name="NgayHetHan" ColumnName="NgayHetHan" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="MaKH" ColumnName="MaKH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
