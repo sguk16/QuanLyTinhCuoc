@@ -1,14 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
 using System.Data.Entity;
-using System.Text;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevExpress.XtraEditors;
 using QuanLyTinhCuoc.DTO;
 
 namespace QuanLyTinhCuoc.View.HoaDonDangKy
@@ -44,12 +38,6 @@ namespace QuanLyTinhCuoc.View.HoaDonDangKy
             }
             Load_HDDK();
         }
-
-        private void gvHDDK_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
-        {
-
-        }
-
         private void gvHDDK_RowClick_1(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
             List<DTO.HoaDonDangKy> hOADONs = ((List<DTO.HoaDonDangKy>)gvHDDK.DataSource);

@@ -60,11 +60,12 @@
             this.barButtonItem5,
             this.barButtonItem6});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
+            this.ribbon.Margin = new System.Windows.Forms.Padding(2);
             this.ribbon.MaxItemId = 7;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
-            this.ribbon.Size = new System.Drawing.Size(1404, 219);
+            this.ribbon.Size = new System.Drawing.Size(917, 143);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // barButtonItem1
@@ -110,6 +111,7 @@
             this.barButtonItem5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.Image")));
             this.barButtonItem5.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.LargeImage")));
             this.barButtonItem5.Name = "barButtonItem5";
+            this.barButtonItem5.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem5_ItemClick);
             // 
             // barButtonItem6
             // 
@@ -155,26 +157,29 @@
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 747);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 507);
+            this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(2);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1404, 48);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(917, 31);
             // 
             // panelControl1
             // 
-            this.panelControl1.Location = new System.Drawing.Point(12, 225);
+            this.panelControl1.Location = new System.Drawing.Point(8, 154);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(2);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1360, 729);
+            this.panelControl1.Size = new System.Drawing.Size(907, 499);
             this.panelControl1.TabIndex = 5;
             // 
             // Giaodienchinh
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1404, 795);
+            this.ClientSize = new System.Drawing.Size(917, 538);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Giaodienchinh";
             this.Ribbon = this.ribbon;
             this.StatusBar = this.ribbonStatusBar;

@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Text;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevExpress.XtraEditors;
 using QuanLyTinhCuoc.DTO;
 
 namespace QuanLyTinhCuoc.View.KhachHangView
@@ -23,24 +16,10 @@ namespace QuanLyTinhCuoc.View.KhachHangView
         {
             gcKhachHang.DataSource = db.KhachHangs.ToList();
         }
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
 
         private void khachhang_Form_Load(object sender, EventArgs e)
         {
             Load_KHACHHANG();
-        }
-
-        private void gcKhachHang_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)

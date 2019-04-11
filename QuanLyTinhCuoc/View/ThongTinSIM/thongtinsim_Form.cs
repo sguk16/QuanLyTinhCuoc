@@ -1,13 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Text;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevExpress.XtraEditors;
 using QuanLyTinhCuoc.BUS;
 using QuanLyTinhCuoc.DTO;
 
@@ -93,31 +87,6 @@ namespace QuanLyTinhCuoc.View.ThongTinSIM
             //form.formclosing += new formclosingeventhandler(this.main_formclosing);
             form.FormClosing += new FormClosingEventHandler(this.ThemSim_FormClosing);
             form.Show();
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void gcSim_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void gcKhachHang_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupControl1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void groupControl2_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void gvKhachhang_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)

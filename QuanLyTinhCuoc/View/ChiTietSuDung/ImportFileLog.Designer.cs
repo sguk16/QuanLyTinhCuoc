@@ -247,7 +247,6 @@
             this.Controls.Add(this.layoutControl1);
             this.Name = "ImportFileLog";
             this.Text = "ImportFileLog";
-            this.Load += new System.EventHandler(this.ImportFileLog_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();

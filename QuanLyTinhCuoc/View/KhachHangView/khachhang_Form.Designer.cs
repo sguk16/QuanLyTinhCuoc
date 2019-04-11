@@ -96,7 +96,6 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // groupBox2
             // 
@@ -167,7 +166,6 @@
             this.gcKhachHang.TabIndex = 0;
             this.gcKhachHang.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvKhachhang});
-            this.gcKhachHang.Click += new System.EventHandler(this.gcKhachHang_Click);
             // 
             // gvKhachhang
             // 

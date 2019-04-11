@@ -1,13 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Text;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevExpress.XtraEditors;
 using QuanLyTinhCuoc.BUS;
 using QuanLyTinhCuoc.DTO;
 
@@ -24,11 +18,6 @@ namespace QuanLyTinhCuoc.View.ChiTietSuDung
         public void Load_CHITIET()
         {
             gcchitietsudung.DataSource = db.ChiTietSuDungs.ToList();
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
         }
 
         private void chitietsudung_Form_Load(object sender, EventArgs e)

@@ -106,7 +106,6 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // dtpNgayHetHan
             // 
@@ -273,7 +272,6 @@
             this.groupControl1.Size = new System.Drawing.Size(744, 340);
             this.groupControl1.TabIndex = 1;
             this.groupControl1.Text = "Thông tin khách hàng";
-            this.groupControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
             // 
             // gcKhachHang
             // 
@@ -292,7 +290,6 @@
             this.gcKhachHang.TabIndex = 1;
             this.gcKhachHang.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvKhachhang});
-            this.gcKhachHang.Click += new System.EventHandler(this.gcKhachHang_Click);
             // 
             // gvKhachhang
             // 
@@ -355,7 +352,6 @@
             this.groupControl2.Size = new System.Drawing.Size(603, 712);
             this.groupControl2.TabIndex = 2;
             this.groupControl2.Text = "Danh sách SIM";
-            this.groupControl2.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl2_Paint);
             // 
             // gcSim
             // 
@@ -376,7 +372,6 @@
             this.gcSim.TabIndex = 1;
             this.gcSim.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvSim});
-            this.gcSim.Click += new System.EventHandler(this.gcSim_Click);
             // 
             // gvSim
             // 

@@ -200,7 +200,6 @@
             this.gvHDDK.Name = "gvHDDK";
             this.gvHDDK.OptionsFind.AlwaysVisible = true;
             this.gvHDDK.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gvHDDK_RowClick_1);
-            this.gvHDDK.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gvHDDK_RowCellClick);
             // 
             // colMakhachhanh
             // 

@@ -148,6 +148,12 @@
     <Compile Include="View\HoaDonDangKy\ThemHoaDon.Designer.cs">
       <DependentUpon>ThemHoaDon.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\HoaDonTinhCuoc\hoadontinhcuoc_Form.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\HoaDonTinhCuoc\hoadontinhcuoc_Form.Designer.cs">
+      <DependentUpon>hoadontinhcuoc_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\KhachHangView\khachhang_Form.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -213,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\HoaDonDangKy\ThemHoaDon.resx">
       <DependentUpon>ThemHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\HoaDonTinhCuoc\hoadontinhcuoc_Form.resx">
+      <DependentUpon>hoadontinhcuoc_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\KhachHangView\khachhang_Form.resx">
       <DependentUpon>khachhang_Form.cs</DependentUpon>
@@ -280,6 +289,7 @@
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
