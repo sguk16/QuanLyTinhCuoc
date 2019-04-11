@@ -27,7 +27,7 @@ namespace QuanLyTinhCuoc.View.HoaDonTinhCuoc
             }
             else
             {
-                QLTinhCuocDT2Entities db = new QLTinhCuocDT2Entities();
+                db = new QLTinhCuocDT2Entities();
                 gchoadontinhcuoc.DataSource = db.HoaDonTinhCuocs.ToList();
 
             }
