@@ -165,10 +165,11 @@
             // 
             // panelControl1
             // 
-            this.panelControl1.Location = new System.Drawing.Point(8, 154);
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl1.Location = new System.Drawing.Point(0, 143);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(2);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(907, 499);
+            this.panelControl1.Size = new System.Drawing.Size(917, 364);
             this.panelControl1.TabIndex = 5;
             // 
             // Giaodienchinh
@@ -183,7 +184,7 @@
             this.Name = "Giaodienchinh";
             this.Ribbon = this.ribbon;
             this.StatusBar = this.ribbonStatusBar;
-            this.Text = "Giaodienchinh";
+            this.Text = "Phần mềm quản lý cước điện thoại";
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.ResumeLayout(false);

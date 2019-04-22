@@ -77,7 +77,7 @@ namespace QuanLyTinhCuoc
         private void btn_suakh_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             //Truyền data vào form SuaKhachHang
-            View.KhachHang.SuaKhachHang form = new View.KhachHang.SuaKhachHang();
+            View.KhachHang.SuaKhachHang form = new View.KhachHang.SuaKhachHang("");
             form.txt_makh.Text = gvKhachHang.GetRowCellValue(gvKhachHang.FocusedRowHandle, "MaKH").ToString();
             form.txt_chucvu.Text = gvKhachHang.GetRowCellValue(gvKhachHang.FocusedRowHandle, "ChucVu").ToString();
             form.txt_cmndkh.Text = gvKhachHang.GetRowCellValue(gvKhachHang.FocusedRowHandle, "CMND").ToString();

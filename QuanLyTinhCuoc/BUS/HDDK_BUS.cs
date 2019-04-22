@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using QuanLyTinhCuoc.DAO;
-using QuanLyTinhCuoc.DTO;
-
-namespace QuanLyTinhCuoc.BUS
+﻿namespace QuanLyTinhCuoc.BUS
 {
+    using System;
+    using System.Collections.Generic;
+    using QuanLyTinhCuoc.DAO;
+    using QuanLyTinhCuoc.DTO;
+
     public class HDDK_BUS
     {
         HDDK_DAO hoadonDAO = new HDDK_DAO();
@@ -12,6 +12,11 @@ namespace QuanLyTinhCuoc.BUS
         public List<HoaDonDangKy> LoadHoaDonDangKy()
         {
             return hoadonDAO.LoadHDDK();
+        }
+
+        public List<HoaDonDangKy> LoadHoaDonDangKy(string masim)
+        {
+            return hoadonDAO.LoadHDDK(masim);
         }
 
         public bool ThemHoaDonDangKy(HoaDonDangKy hoadon)

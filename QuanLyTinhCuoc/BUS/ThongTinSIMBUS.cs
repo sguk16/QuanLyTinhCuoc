@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using QuanLyTinhCuoc.DTO;
-using QuanLyTinhCuoc.DAO;
-
-namespace QuanLyTinhCuoc.BUS
+﻿namespace QuanLyTinhCuoc.BUS
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using QuanLyTinhCuoc.DTO;
+    using QuanLyTinhCuoc.DAO;
+
     public class ThongTinSIMBUS
     {
         ThongTinSIMDAO thongtinDAO = new ThongTinSIMDAO();

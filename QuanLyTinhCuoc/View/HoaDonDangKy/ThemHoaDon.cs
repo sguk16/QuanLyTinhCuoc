@@ -1,9 +1,9 @@
-﻿using System;
-using System.Windows.Forms;
-using QuanLyTinhCuoc.BUS;
-
-namespace QuanLyTinhCuoc.View.HoaDonDangKy
+﻿namespace QuanLyTinhCuoc.View.HoaDonDangKy
 {
+    using System;
+    using System.Windows.Forms;
+    using QuanLyTinhCuoc.BUS;
+
     public partial class ThemHoaDon : DevExpress.XtraEditors.XtraForm
     {
         HDDK_BUS hoadonBUS = new HDDK_BUS();
@@ -32,7 +32,7 @@ namespace QuanLyTinhCuoc.View.HoaDonDangKy
             {
                 MessageBox.Show("Vui lòng chọn mã SIM", "Thông báo");
             }
-            else if (cbbIDSIM.Properties.Items.Contains(cbbIDSIM.Text))
+            else if (!cbbIDSIM.Properties.Items.Contains(cbbIDSIM.Text))
             {
                 MessageBox.Show("Mã SIM không đúng!", "Thông báo");
             }
@@ -60,7 +60,5 @@ namespace QuanLyTinhCuoc.View.HoaDonDangKy
         {
             this.Close();
         }
-
-
     }
 }

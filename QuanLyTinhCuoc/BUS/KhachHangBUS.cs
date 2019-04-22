@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using QuanLyTinhCuoc.DAO;
-using QuanLyTinhCuoc.DTO;
-
-namespace QuanLyTinhCuoc.BUS
+﻿namespace QuanLyTinhCuoc.BUS
 {
+    using System;
+    using System.Collections.Generic;
+    using QuanLyTinhCuoc.DAO;
+    using QuanLyTinhCuoc.DTO;
+
     public class KhachHangBUS
     {
         KhachHangDAO khachhangDAO;
@@ -15,6 +15,11 @@ namespace QuanLyTinhCuoc.BUS
         public List<KhachHang> LoadKhachHang()
         {
             return khachhangDAO.LoadDanhSach();
+        }
+        
+        public KhachHang LoadKhachHang(string makh)
+        {
+            return khachhangDAO.TimKhachHang(makh);
         }
 
         public bool ThemKhachHang(KhachHang kh)
@@ -30,6 +35,11 @@ namespace QuanLyTinhCuoc.BUS
         public bool XoaKhachHang(KhachHang khachhang)
         {
             return khachhangDAO.XoaKhachHang(khachhang);
+        }
+
+        public bool XoaKhachHang(string makh)
+        {
+            return khachhangDAO.XoaKhachHang(makh);
         }
 
         public string XuLyMa()

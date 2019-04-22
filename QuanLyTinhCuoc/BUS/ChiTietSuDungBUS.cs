@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
-using QuanLyTinhCuoc.DAO;
-using QuanLyTinhCuoc.DTO;
-
-namespace QuanLyTinhCuoc.BUS
+﻿namespace QuanLyTinhCuoc.BUS
 {
+    using System.Collections.Generic;
+    using QuanLyTinhCuoc.DAO;
+    using QuanLyTinhCuoc.DTO;
+
     public class ChiTietSuDungBUS
     {
         ChiTietSuDungDAO ChiTietSuDungDAO;

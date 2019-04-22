@@ -1,23 +1,26 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using QuanLyTinhCuoc.DTO;
-
-
-namespace QuanLyTinhCuoc.DAO
+﻿namespace QuanLyTinhCuoc.DAO
 {
+    using System.Collections.Generic;
+    using System.Linq;
+    using QuanLyTinhCuoc.DTO;
     public class KhachHangDAO
     {
         QLTinhCuocDT2Entities db;
 
         public KhachHangDAO()
         {
-            db = new DTO.QLTinhCuocDT2Entities();
+            db = new QLTinhCuocDT2Entities();
         }
 
         public List<KhachHang> LoadDanhSach()
         {
             var lst1 = from kh in db.KhachHangs select kh;
             return lst1.ToList();
+        }
+
+        public KhachHang TimKhachHang(string makh)
+        {
+            return db.KhachHangs.Find(makh);
         }
 
         public bool ThemKhachHang(KhachHang khachhang)
@@ -86,6 +89,12 @@ namespace QuanLyTinhCuoc.DAO
             {
                 return false;
             }
+        }
+
+        public bool XoaKhachHang(string makh)
+        {
+            KhachHang khachhang = TimKhachHang(makh);
+            return XoaKhachHang(khachhang);
         }
 
         public string XuLyMa()

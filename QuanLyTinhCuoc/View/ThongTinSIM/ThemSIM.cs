@@ -1,9 +1,9 @@
-﻿using System;
-using System.Windows.Forms;
-using QuanLyTinhCuoc.BUS;
-
-namespace QuanLyTinhCuoc.View.ThongTinSIM
+﻿namespace QuanLyTinhCuoc.View.ThongTinSIM
 {
+    using System;
+    using System.Windows.Forms;
+    using QuanLyTinhCuoc.BUS;
+
     public partial class ThemSIM : DevExpress.XtraEditors.XtraForm
     {
         ThongTinSIMBUS thongtinBUS = new ThongTinSIMBUS();

@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Windows.Forms;
-using QuanLyTinhCuoc.BUS;
-using QuanLyTinhCuoc.DTO;
-
-namespace QuanLyTinhCuoc.View.ChiTietSuDung
+﻿namespace QuanLyTinhCuoc.View.ChiTietSuDung
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Windows.Forms;
+    using QuanLyTinhCuoc.BUS;
+
     public partial class chitietsudung_Form : DevExpress.XtraEditors.XtraUserControl
     {
-        QLTinhCuocDT2Entities db = new QLTinhCuocDT2Entities();
         ChiTietSuDungBUS chitietbus = new ChiTietSuDungBUS();
         public chitietsudung_Form()
         {
@@ -17,7 +14,7 @@ namespace QuanLyTinhCuoc.View.ChiTietSuDung
         }
         public void Load_CHITIET()
         {
-            gcchitietsudung.DataSource = db.ChiTietSuDungs.ToList();
+            gcchitietsudung.DataSource = chitietbus.LoadChiTietSuDung();
         }
 
         private void chitietsudung_Form_Load(object sender, EventArgs e)
@@ -40,18 +37,20 @@ namespace QuanLyTinhCuoc.View.ChiTietSuDung
         private void btn_nhapfilelog_Click(object sender, EventArgs e)
         {
             openFileDialog1.ShowDialog();
-            string[] lines = System.IO.File.ReadAllLines(openFileDialog1.FileName);
-            //string[] lines = System.IO.File.ReadAllLines(@"C:/Users/DELL/Desktop/Output.txt");
-            bool tmp = chitietbus.Import(lines);
-            if (tmp == true)
+            if(openFileDialog1.FileName != String.Empty)
             {
-                MessageBox.Show("Thêm thành công!", "Thông báo");
+                string[] lines = System.IO.File.ReadAllLines(openFileDialog1.FileName);
+                bool tmp = chitietbus.Import(lines);
+                if (tmp == true)
+                {
+                    MessageBox.Show("Thêm thành công!", "Thông báo");
+                }
+                else
+                {
+                    MessageBox.Show("Thêm thất bại!", "Thông báo");
+                }
+                Load_CHITIET();
             }
-            else
-            {
-                MessageBox.Show("Thêm thất bại!", "Thông báo");
-            }
-            Load_CHITIET();
         }
     }
 }

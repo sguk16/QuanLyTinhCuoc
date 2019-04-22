@@ -1,16 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using QuanLyTinhCuoc.DTO;
-
-namespace QuanLyTinhCuoc.DAO
+﻿namespace QuanLyTinhCuoc.DAO
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using QuanLyTinhCuoc.DTO;
+
     public class ChiTietSuDungDAO
     {
         QLTinhCuocDT2Entities db;
         public ChiTietSuDungDAO()
         {
-            db = new DTO.QLTinhCuocDT2Entities();
+            db = new QLTinhCuocDT2Entities();
         }
         public List<ChiTietSuDung> LoadDanhSach()
         {

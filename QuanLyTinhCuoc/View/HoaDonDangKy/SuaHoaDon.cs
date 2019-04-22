@@ -1,9 +1,9 @@
-﻿using System;
-using System.Windows.Forms;
-using QuanLyTinhCuoc.BUS;
-
-namespace QuanLyTinhCuoc.View.HoaDonDangKy
+﻿namespace QuanLyTinhCuoc.View.HoaDonDangKy
 {
+    using System;
+    using System.Windows.Forms;
+    using QuanLyTinhCuoc.BUS;
+
     public partial class SuaHoaDon : DevExpress.XtraEditors.XtraForm
     {
         HDDK_BUS hoadonBUS = new HDDK_BUS();

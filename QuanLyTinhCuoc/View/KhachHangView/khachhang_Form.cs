@@ -1,20 +1,21 @@
-﻿using System;
-using System.Linq;
-using System.Windows.Forms;
-using QuanLyTinhCuoc.DTO;
-
-namespace QuanLyTinhCuoc.View.KhachHangView
+﻿namespace QuanLyTinhCuoc.View.KhachHangView
 {
+    using System;
+    using QuanLyTinhCuoc.BUS;
+    using QuanLyTinhCuoc.View.KhachHang;
+    using System.Windows.Forms;
+
     public partial class khachhang_Form : DevExpress.XtraEditors.XtraUserControl
     {
-        QLTinhCuocDT2Entities db = new QLTinhCuocDT2Entities();
+        KhachHangBUS KhachHang;
         public khachhang_Form()
         {
             InitializeComponent();
         }
         public void Load_KHACHHANG()
         {
-            gcKhachHang.DataSource = db.KhachHangs.ToList();
+            KhachHang = new KhachHangBUS();
+            gcKhachHang.DataSource = KhachHang.LoadKhachHang();
         }
 
         private void khachhang_Form_Load(object sender, EventArgs e)
@@ -24,36 +25,23 @@ namespace QuanLyTinhCuoc.View.KhachHangView
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            string makh = txtmakhachhang.EditValue.ToString();
-            DTO.KhachHang temp = db.KhachHangs.FirstOrDefault(i => i.MaKH == makh);
+            ThemKhachHang khachHang = new ThemKhachHang();
+            khachHang.ShowDialog();
+            Load_KHACHHANG();
+        }
 
-            if (temp != null)
-            {
-                MessageBox.Show("Mã khách hàng đã tồn tại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            string makh = gvKhachhang.GetRowCellValue(gvKhachhang.FocusedRowHandle, colMakhachhanh).ToString();
+            SuaKhachHang khachHang = new SuaKhachHang(makh);
+            khachHang.ShowDialog();
+            Load_KHACHHANG();
+        }
 
-                string Tenkhachhang = txttenkhachhang.Text;
-                string Chucvu = txtchucvu.Text;
-                string Nghenghiep = txtnghenghiep.Text;
-                string Email = txtemail.Text;
-                string diachi = txtdiachi.Text;
-                string CMND = txtcmnd.Text;
-                try
-                {
-                    db.KhachHangs.Add(new DTO.KhachHang() { MaKH = makh, TenKH = Tenkhachhang, CMND = CMND, NgheNghiep = Nghenghiep, ChucVu = Chucvu, DiaChi = diachi, Flag=true});
-                    db.SaveChanges();
-                    MessageBox.Show("Thêm khách hàng thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch
-                {
-                    MessageBox.Show("Thêm khách hàng không thành công!", "Không thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-
-                Load_KHACHHANG();
-
-            }
+        private void simpleButton3_Click(object sender, EventArgs e)
+        {
+            string makh = gvKhachhang.GetRowCellValue(gvKhachhang.FocusedRowHandle, colMakhachhanh).ToString();
+            KhachHang.XoaKhachHang(makh);
         }
     }
 }

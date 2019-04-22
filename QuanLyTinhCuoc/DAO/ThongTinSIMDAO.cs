@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using QuanLyTinhCuoc.DTO;
-
-namespace QuanLyTinhCuoc.DAO
+﻿namespace QuanLyTinhCuoc.DAO
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using QuanLyTinhCuoc.DTO;
+
     public class ThongTinSIMDAO
     {
         QLTinhCuocDT2Entities db;
@@ -19,7 +19,7 @@ namespace QuanLyTinhCuoc.DAO
         }
         public List<ThongTinSIM> loadtheokh(string makh)
         {
-            var danhsach = db.ThongTinSIMs.Where(p=>p.MaKH == makh);
+            var danhsach = db.ThongTinSIMs.Where(p => p.MaKH == makh);
             return danhsach.ToList();
         }
 
@@ -53,6 +53,7 @@ namespace QuanLyTinhCuoc.DAO
                 sim.NgayDangKy = thongtin.NgayDangKy;
                 sim.NgayHetHan = thongtin.NgayHetHan;
                 sim.SoDienThoai = thongtin.SoDienThoai;
+                sim.Flag = thongtin.Flag;
                 db.SaveChanges();
                 return true;
             }

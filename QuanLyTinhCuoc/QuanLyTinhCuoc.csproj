@@ -67,10 +67,12 @@
   <ItemGroup>
     <Compile Include="BUS\ChiTietSuDungBUS.cs" />
     <Compile Include="BUS\HDDK_BUS.cs" />
+    <Compile Include="BUS\HDTC_BUS.cs" />
     <Compile Include="BUS\KhachHangBUS.cs" />
     <Compile Include="BUS\ThongTinSIMBUS.cs" />
     <Compile Include="DAO\ChiTietSuDungDAO.cs" />
     <Compile Include="DAO\HDDK_DAO.cs" />
+    <Compile Include="DAO\HDTC_DAO.cs" />
     <Compile Include="DAO\KhachHangDAO.cs" />
     <Compile Include="DAO\ThongTinSIMDAO.cs" />
     <Compile Include="DTO\ChiTietSuDung.cs">

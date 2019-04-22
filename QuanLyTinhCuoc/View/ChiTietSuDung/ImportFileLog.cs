@@ -1,9 +1,9 @@
-﻿using System;
-using System.Windows.Forms;
-using QuanLyTinhCuoc.BUS;
-
-namespace QuanLyTinhCuoc.View.ChiTietSuDung
+﻿namespace QuanLyTinhCuoc.View.ChiTietSuDung
 {
+    using System;
+    using System.Windows.Forms;
+    using QuanLyTinhCuoc.BUS;
+
     public partial class ImportFileLog : DevExpress.XtraEditors.XtraForm
     {
         ChiTietSuDungBUS chitietbus = new ChiTietSuDungBUS();

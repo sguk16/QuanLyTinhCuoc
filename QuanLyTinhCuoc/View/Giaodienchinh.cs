@@ -12,6 +12,7 @@ namespace QuanLyTinhCuoc.View
         public Giaodienchinh()
         {
             InitializeComponent();
+            barButtonItem1.PerformClick();
         }
 
         private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)

@@ -1,61 +1,50 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Windows.Forms;
-using QuanLyTinhCuoc.DTO;
-
-namespace QuanLyTinhCuoc.View.HoaDonDangKy
+﻿namespace QuanLyTinhCuoc.View.HoaDonDangKy
 {
+    using System;
+    using System.Collections.Generic;
+    using QuanLyTinhCuoc.BUS;
+
     public partial class hoadondangky_Form : DevExpress.XtraEditors.XtraUserControl
     {
-        QLTinhCuocDT2Entities db = new QLTinhCuocDT2Entities();
+        HDDK_BUS hddkbus = new HDDK_BUS();
+        ThongTinSIMBUS thongtinsimbus = new ThongTinSIMBUS();
         public hoadondangky_Form()
         {
             InitializeComponent();
         }
         public void Load_HDDK()
         {
-            gcHDDK.DataSource = db.HoaDonDangKies.ToList();
+            gcHDDK.DataSource = hddkbus.LoadHoaDonDangKy();
+        }
+        public void Load_SIM()
+        {
+            gcSIM.DataSource = thongtinsimbus.LoadThongTinSim();
         }
         private void hoadondangky_Form_Load(object sender, EventArgs e)
         {
             Load_HDDK();
+            Load_SIM();
         }
 
-
-        private void btn_xoahddk_Click(object sender, EventArgs e)
+        private void gvSIM_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
-            DTO.HoaDonDangKy hddk = db.HoaDonDangKies.Find(tbxMaHHDK.Text);
+            List<DTO.ThongTinSIM> sims = ((List<DTO.ThongTinSIM>)gvSIM.DataSource);
+            DTO.ThongTinSIM sim = sims[gvSIM.FocusedRowHandle];
+            string masim = sim.IDSIM;
+            gcHDDK.DataSource = hddkbus.LoadHoaDonDangKy(masim);
+        }
 
-            DialogResult rs = MessageBox.Show("Bạn có muốn xóa " + hddk.MaHDDK + " ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (rs == DialogResult.Yes)
-            {
-                hddk.Flag = false;
-
-                db.Entry(hddk).State = EntityState.Modified;
-                db.SaveChanges();
-            }
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            ThemHoaDon themHoaDon = new ThemHoaDon();
+            themHoaDon.ShowDialog();
             Load_HDDK();
-        }
-        private void gvHDDK_RowClick_1(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
-        {
-            List<DTO.HoaDonDangKy> hOADONs = ((List<DTO.HoaDonDangKy>)gvHDDK.DataSource);
-            DTO.HoaDonDangKy hOADON = hOADONs[gvHDDK.FocusedRowHandle];
-            tbxMaHHDK.Text = hOADON.MaHDDK;
-            tbxChiPhiDK.Text = hOADON.ChiPhiDangKy.ToString();
-            tbxIDSIM.Text = hOADON.IDSIM;
-            tbxTenKH.Text = hOADON.ThongTinSIM.KhachHang.TenKH;
+            Load_SIM();
         }
 
-        private void gcHDDK_Click(object sender, EventArgs e)
+        private void btnReset_Click(object sender, EventArgs e)
         {
-            List<DTO.HoaDonDangKy> hOADONs = ((List<DTO.HoaDonDangKy>)gvHDDK.DataSource);
-            DTO.HoaDonDangKy hOADON = hOADONs[gvHDDK.FocusedRowHandle];
-            tbxMaHHDK.Text = hOADON.MaHDDK;
-            tbxChiPhiDK.Text = hOADON.ChiPhiDangKy.ToString();
-            tbxIDSIM.Text = hOADON.IDSIM;
-            tbxTenKH.Text = hOADON.ThongTinSIM.KhachHang.TenKH;
+            Load_SIM();
         }
     }
 }

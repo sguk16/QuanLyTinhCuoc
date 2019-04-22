@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using QuanLyTinhCuoc.DTO;
-
-namespace QuanLyTinhCuoc.DAO
+﻿namespace QuanLyTinhCuoc.DAO
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using QuanLyTinhCuoc.DTO;
+
     public class HDDK_DAO
     {
         QLTinhCuocDT2Entities db;
@@ -19,15 +19,22 @@ namespace QuanLyTinhCuoc.DAO
             return db.HoaDonDangKies.ToList();
         }
 
+        public List<HoaDonDangKy> LoadHDDK(string masim)
+        {
+            return db.HoaDonDangKies.Where(hd => hd.IDSIM == masim).ToList();
+        }
+
         public bool ThemHoaDon(HoaDonDangKy hoadon)
         {
             try
             {
                 HoaDonDangKy hd = new HoaDonDangKy();
+                ThongTinSIM sim = db.ThongTinSIMs.Find(hoadon.IDSIM);
                 hd.MaHDDK = hoadon.MaHDDK;
                 hd.IDSIM = hoadon.IDSIM;
                 hd.NgayDangKy = hoadon.NgayDangKy;
                 hd.ChiPhiDangKy = hoadon.ChiPhiDangKy;
+                sim.Flag = true;
                 db.HoaDonDangKies.Add(hd);
                 db.SaveChanges();
                 return true;

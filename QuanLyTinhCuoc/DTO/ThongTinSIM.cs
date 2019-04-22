@@ -11,7 +11,7 @@ namespace QuanLyTinhCuoc.DTO
 {
     using System;
     using System.Collections.Generic;
-    
+
     public partial class ThongTinSIM
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,14 +21,14 @@ namespace QuanLyTinhCuoc.DTO
             this.HoaDonDangKies = new HashSet<HoaDonDangKy>();
             this.HoaDonTinhCuocs = new HashSet<HoaDonTinhCuoc>();
         }
-    
+
         public string IDSIM { get; set; }
         public string SoDienThoai { get; set; }
         public Nullable<System.DateTime> NgayDangKy { get; set; }
         public Nullable<System.DateTime> NgayHetHan { get; set; }
         public Nullable<bool> Flag { get; set; }
         public string MaKH { get; set; }
-    
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietSuDung> ChiTietSuDungs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
